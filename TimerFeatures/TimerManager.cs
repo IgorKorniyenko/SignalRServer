@@ -15,7 +15,7 @@ namespace System.Threading
         {
             _action = action;
             _autoResetEvent = new AutoResetEvent(false);
-            _timer = new Timer(Execute, _autoResetEvent, 1000, 2000);
+            _timer = new Timer(Execute, _autoResetEvent, 1000, 60000);
             TimerStarted = DateTime.Now;
 
         }
